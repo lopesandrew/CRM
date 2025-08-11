@@ -1,14 +1,8 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+// vite.config.ts
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// Vite configuration for the CRM project
 export default defineConfig({
+  base: '/CRM/', // <= obrigatório em GitHub Pages (project page)
   plugins: [react()],
-  server: {
-    port: 5173,
-  },
-  build: {
-    outDir: 'dist',
-    emptyOutDir: true,
-  },
-});
+})
